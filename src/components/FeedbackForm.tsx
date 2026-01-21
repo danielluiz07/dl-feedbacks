@@ -19,7 +19,11 @@ export default function FeedbackForm() {
     });
     
     if(res.ok){
-      toast.success("")
+      toast.success("Feedback Enviado com sucesso!")
+      setName('')
+      setMessage('')
+    }else{
+      toast.error("Erro ao enviar Feedback")
     }
 
   };
