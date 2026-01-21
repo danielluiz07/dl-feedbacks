@@ -14,7 +14,7 @@ export default function FeedbackForm() {
 
     const res = await fetch("/api/feedbacks", {
       method: "POST",
-      body: JSON.stringify({ name, message }),
+      body: JSON.stringify({ name: name, message: message }),
       headers: { "Content-Type": "application/json" },
     });
     
