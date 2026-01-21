@@ -8,7 +8,7 @@ export default function Home() {
       <aside className="w-full md:w-96 bg-white p-8 md:h-screen md:sticky md:top-0 border-r border-gray-200 flex flex-col justify-center">
         <div className="mb-10 text-center md:text-left">
           <h1 className="text-3xl font-black text-blue-600 tracking-tight">dl-feedbacks</h1>
-          <p className="text-gray-400 mt-2 font-medium">O que você está achando do projeto?</p>
+          <p className="text-gray-400 mt-2 font-medium">Deixe aqui seu feedback</p>
         </div>
         
         <FeedbackForm />
