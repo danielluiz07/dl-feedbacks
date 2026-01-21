@@ -1,5 +1,5 @@
-import Image from "next/image";
 import FeedbackForm from "@/components/FeedbackForm";
+import FeedbackList from "@/components/FeedbackList";
 
 export default function Home() {
   return (
@@ -12,6 +12,9 @@ export default function Home() {
         </div>
         
         <FeedbackForm />
+        <footer className="mt-auto pt-8 text-xs text-gray-300">
+          Desenvolvido por Daniel Luiz (DL)
+        </footer>
       </aside>
 
       <main className="flex-1 p-8 md:p-16">
@@ -23,7 +26,7 @@ export default function Home() {
         </header>
 
         <div className="grid gap-6">
-           {/* Map das mensagens aqui */}
+           <FeedbackList />
         </div>
       </main>
 
