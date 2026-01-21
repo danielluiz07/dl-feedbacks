@@ -34,14 +34,14 @@ export default function FeedbackForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Como te chamam?"
-          className="w-full bg-gray-50 p-4 rounded-2xl border-none focus:ring-2 focus:ring-blue-500 outline-none transition-all text-gray-700"
+          className="w-full bg-gray-200 p-4 rounded-2xl border-none focus:ring-2 focus:ring-blue-500 outline-none transition-all text-gray-700"
         />
         <textarea 
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Mande sua mensagem..."
           rows={4}
-          className="w-full bg-gray-50 p-4 rounded-2xl border-none focus:ring-2 focus:ring-blue-500 outline-none transition-all text-gray-700 resize-none"
+          className="w-full bg-gray-200 p-4 rounded-2xl border-none focus:ring-2 focus:ring-blue-500 outline-none transition-all text-gray-700 resize-none"
         />
         <button 
           disabled={loading}
