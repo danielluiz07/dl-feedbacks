@@ -20,6 +20,7 @@ export async function POST(request: Request) {
     const result = feedbackSchema.safeParse(body);
 
     if (!result.success) {
+      console.log("ERRO DE VALIDAÇÃO:", result.error.format());
       return NextResponse.json(
         { errors: result.error }, 
         { status: 400 }
