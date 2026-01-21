@@ -19,7 +19,7 @@ export default function FeedbackForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-4 p-4 bg-gray-200 rounded-lg"
+      className="flex flex-col gap-4 p-4 bg-gray-600 rounded-lg"
     >
       <input
         value={name}
