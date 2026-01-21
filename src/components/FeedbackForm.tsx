@@ -55,6 +55,9 @@ export default function FeedbackForm() {
         >
           {loading ? 'Enviando...' : 'Enviar Feedback'}
         </button>
+        <footer className="mt-auto pt-8 text-xs text-gray-300">
+          Desenvolvido por Daniel Luiz (DL)
+        </footer>
       </form>
     </div>
   );
