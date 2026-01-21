@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import {toast} from 'react-toastify'
 
@@ -19,9 +18,16 @@ export default function FeedbackForm() {
     });
     
     if(res.ok){
-      toast.success("Feedback Enviado com sucesso!")
-      setName('')
-      setMessage('')
+    const duration = 4000;
+
+    toast.success('Enviado com sucesso!', { duration });
+
+    setTimeout(() => {
+      window.location.reload();
+    }, duration);
+
+    setName('')
+    setMessage('')
     }else{
       toast.error("Erro ao enviar Feedback")
     }
