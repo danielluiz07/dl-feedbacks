@@ -25,34 +25,31 @@ export default function FeedbackForm() {
     }else{
       toast.error("Erro ao enviar Feedback")
     }
-
+    setLoading(false)
   };
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex flex-col gap-4 p-4 bg-gray-600 rounded-lg"
-    >
-      <input
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Seu nome"
-        className="p-2 border rounded"
-        required
-      />
-      <input
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        placeholder="Deixe seu Feedback"
-        className="p-2 border rounded"
-        required
-      />
-
-      <button
-        type="submit"
-        className="bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
-      >
-        Enviar Feedback
-      </button>
-    </form>
+    <div className="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 transition-all hover:shadow-2xl">
+      <form onSubmit={handleSubmit} className="space-y-5">
+        <input 
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Como te chamam?"
+          className="w-full bg-gray-50 p-4 rounded-2xl border-none focus:ring-2 focus:ring-blue-500 outline-none transition-all text-gray-700"
+        />
+        <textarea 
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Mande sua mensagem..."
+          rows={4}
+          className="w-full bg-gray-50 p-4 rounded-2xl border-none focus:ring-2 focus:ring-blue-500 outline-none transition-all text-gray-700 resize-none"
+        />
+        <button 
+          disabled={loading}
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl transition-all active:scale-95 disabled:opacity-50"
+        >
+          {loading ? 'Enviando...' : 'Enviar Feedback'}
+        </button>
+      </form>
+    </div>
   );
 }
