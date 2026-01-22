@@ -15,6 +15,15 @@ O projeto utiliza uma stack moderna focada em performance e tipagem segura:
 * **Notificações:** [React-Toastify](https://fkhadra.github.io/react-toastify/)
 
 
+## 📂 Estrutura de Pastas Principal
+
+Para manter o projeto limpo, a lógica está organizada da seguinte forma:
+
+* `src/app/api/`: Rotas de backend para manipulação dos feedbacks.
+* `src/components/`: Componentes de interface (Formulário e Lista).
+* `src/lib/`: Configurações de conexão com o banco de dados.
+* `src/schemas/`: Esquemas de validação de dados com Zod.
+
 ## 🛠️ Como rodar o projeto
 
 1.  **Clone o repositório:**
@@ -40,3 +49,6 @@ O projeto utiliza uma stack moderna focada em performance e tipagem segura:
     ```bash
     npm run dev
     ```
+
+---
+Desenvolvido por **Daniel Luiz (Dois L)**.
