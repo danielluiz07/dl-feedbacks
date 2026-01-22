@@ -13,3 +13,30 @@ O projeto utiliza uma stack moderna focada em performance e tipagem segura:
 * **Estilização:** [Tailwind CSS](https://tailwindcss.com/)
 * **Validação:** [Zod](https://zod.dev/)
 * **Notificações:** [React-Toastify](https://fkhadra.github.io/react-toastify/)
+
+
+## 🛠️ Como rodar o projeto
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/danielluiz07/dl-feedbacks.git](https://github.com/danielluiz07/dl-feedbacks.git)
+    ```
+
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
+
+3.  **Configure o banco de dados:**
+    Certifique-se de que o arquivo `.env` está apontando para o SQLite: `DATABASE_URL="file:./dev.db"`
+
+4.  **Sincronize o Prisma:**
+    ```bash
+    npx prisma generate
+    npx prisma db push
+    ```
+
+5.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
