@@ -9,7 +9,8 @@ export async function GET() {
     });
     return NextResponse.json(feedbacks);
   } catch (error) {
-    return NextResponse.json({ error: "Erro ao buscar feedbacks" }, { status: 500 });
+    console.error("ERRO NO BANCO:", error); 
+    return NextResponse.json({ error: "Erro ao buscar dados" }, { status: 500 });
   }
 }
 

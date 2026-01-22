@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 
 interface Feedback {
@@ -11,26 +12,39 @@ interface Feedback {
 export default function FeedbackList() {
   const [feedbacks, setFeedbacks] = useState<Feedback[]>([]);
   const [loading, setLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   const fetchFeedbacks = async () => {
     try {
       const res = await fetch('/api/feedbacks');
       const data = await res.json();
-      setFeedbacks(data);
+     
+      if (Array.isArray(data)) {
+        setFeedbacks(data);
+      } else {
+        console.error("A API não retornou uma lista:", data);
+        setFeedbacks([]); 
+      }
     } catch (error) {
       console.error("Erro ao carregar feedbacks:", error);
+      setFeedbacks([]);
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
+    setMounted(true);
     fetchFeedbacks();
   }, []);
 
+  if (!mounted) return null;
+
   if (loading) return <p className="text-gray-400 animate-pulse">Carregando mensagens...</p>;
-  
-  if (feedbacks.length === 0) return <p className="text-gray-400">Nenhum feedback ainda. Seja o primeiro!</p>;
+
+  if (!Array.isArray(feedbacks) || feedbacks.length === 0) {
+    return <p className="text-gray-400">Nenhum feedback ainda. Seja o primeiro!</p>;
+  }
 
   return (
     <div className="grid gap-6">
