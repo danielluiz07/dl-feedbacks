@@ -3,8 +3,7 @@
 ![Project Preview](./public/preview.png)
 
 > Um sistema de guestbook(registro digital para pessoas deixarem seus feedbacks) moderno e minimalista para coleta de feedbacks, podendo ser utilizada em divesas plataformas e comunidades. Este projeto foi desenvolvido focado em uma experiência de usuário limpa e um fluxo de dados eficiente utilizando as tecnologias mais recentes do ecossistema React.
---
-> 
+
 ## Tecnologias Utilizadas
 
 O projeto utiliza uma stack moderna focada em performance e tipagem segura:
