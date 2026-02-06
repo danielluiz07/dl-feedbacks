@@ -8,7 +8,7 @@
 
 O projeto utiliza uma stack moderna focada em performance e tipagem segura:
 
-* **Framework:** [Next.js 15 (App Router)](https://nextjs.org/)
+* **Framework:** [Next.js 16 (App Router)](https://nextjs.org/)
 * **Banco de Dados:** [SQLite](https://www.sqlite.org/) com [Prisma ORM](https://www.prisma.io/)
 * **Estilização:** [Tailwind CSS](https://tailwindcss.com/)
 * **Validação:** [Zod](https://zod.dev/)
